@@ -27,7 +27,7 @@ The script currently sets `MU = 0.05` to produce a visually clear demonstration.
 
 `mu = 3.003905077e-6`
 
-To plot the Earth–Sun case, change the `MU` constant near the top of `potential_visualisation.py` to that value. The resulting surface will have a much more extreme difference in scale near the smaller primary.
+To plot the Earth–Sun case, change the `MU` constant near the top of the Python script you want to run (`potential_visualisation.py` or `potential_contour.py`) to that value. The resulting plots will have a much more extreme difference in scale near the smaller primary.
 
 ## Requirements
 
@@ -49,9 +49,18 @@ python3 potential_visualisation.py
 
 The script opens an interactive Matplotlib 3D surface plot. You can rotate the plot using the mouse.
 
+To display the 2D contour map instead, run:
+
+```bash
+python3 potential_contour.py
+```
+
+The contour map shows curves of constant effective potential.
+
 ## Files
 
-- `potential_visualisation.py` — computes and plots the effective potential.
+- `potential_visualisation.py` — computes and plots a 3D surface of the effective potential.
+- `potential_contour.py` — computes and plots a 2D contour map of the effective potential.
 - `requirements.txt` — Python package dependencies.
 
 ## Scope and limitations
