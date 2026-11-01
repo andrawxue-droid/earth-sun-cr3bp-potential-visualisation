@@ -4,28 +4,28 @@ A small Python script for plotting the dimensionless effective potential in the 
 
 ## Model
 
-The script evaluates
+The script evaluates the dimensionless effective potential:
 
-\[
-V(x,y) = -\left(\frac{1-\mu}{r_1} + \frac{\mu}{r_2} + \frac{1}{2}(x^2+y^2)\right),
-\]
+`V(x, y) = -((1 - mu)/r1 + mu/r2 + 0.5*(x^2 + y^2))`
 
-where
+where the distances to the two primaries are:
 
-\[
-r_1 = \sqrt{(x+\mu)^2+y^2}, \qquad
-r_2 = \sqrt{(x-1+\mu)^2+y^2}.
-\]
+`r1 = sqrt((x + mu)^2 + y^2)`
 
-The two primaries are located at \((-\mu,0)\) and \((1-\mu,0)\) in the normalised rotating coordinate system.
+`r2 = sqrt((x - 1 + mu)^2 + y^2)`
+
+The two primaries are located at:
+
+- Sun: `(-mu, 0)`
+- Earth: `(1 - mu, 0)`
+
+These coordinates are in the normalised rotating reference frame.
 
 ## Important: mass parameter
 
-The script currently sets `MU = 0.05` to produce a visually clear demonstration. **This is not the actual Earth–Sun mass parameter.** For an Earth–Sun model, use approximately
+The script currently sets `MU = 0.05` to produce a visually clear demonstration. **This is not the actual Earth–Sun mass parameter.** For an Earth–Sun model, use approximately:
 
-\[
-\mu = 3.003905077\times 10^{-6}.
-\]
+`mu = 3.003905077e-6`
 
 To plot the Earth–Sun case, change the `MU` constant near the top of `potential_visualisation.py` to that value. The resulting surface will have a much more extreme difference in scale near the smaller primary.
 
